@@ -1,8 +1,11 @@
 package com.vidor.bean;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 public class UserBean {
 
     private String userId;
@@ -23,45 +26,5 @@ public class UserBean {
         return this.resourceBeans.stream()
                 .filter(resourceBean -> resourceBean.getResourceName().equals(resource))
                 .count() > 0;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getUserPass() {
-        return userPass;
-    }
-
-    public void setUserPass(String userPass) {
-        this.userPass = userPass;
-    }
-
-    public List<RoleBean> getUserRoles() {
-        return userRoles;
-    }
-
-    public void setUserRoles(List<RoleBean> userRoles) {
-        this.userRoles = userRoles;
-    }
-
-    public List<ResourceBean> getResourceBeans() {
-        return resourceBeans;
-    }
-
-    public void setResourceBeans(List<ResourceBean> resourceBeans) {
-        this.resourceBeans = resourceBeans;
     }
 }
